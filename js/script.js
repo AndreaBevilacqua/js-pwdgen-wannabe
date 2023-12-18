@@ -10,7 +10,7 @@ console.log('JS OK')
   4 - Recupero l'elemento html
   5 - Costruisco la password
   6 - Costruisco il messaggio
-  7- scrivo la password sulla pagina
+  7 - scrivo la password sulla pagina
 */
 
 const Name = prompt("Come ti chiami?");
@@ -22,16 +22,13 @@ console.log(LastName);
 const FavouriteColor = prompt("Qual é il tuo colore preferito?");
 console.log(FavouriteColor);
 
-const element = document.getElementById("result");
-console.log(element);
-
 const password = Name + LastName + FavouriteColor + "12";
 console.log(password);
 
-const message = `Questa é la tua password ${password}`;
-console.log(message);
+const element = document.getElementById("result");
+console.log(element);
 
-element.innerText = password;
+element.innerHTML = `Questa é la tua password: <strong>${password}</strong>`;
 
 
 
